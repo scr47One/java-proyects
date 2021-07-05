@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B85F488A-7F35-4509-B4F0-F7EF510E9B56}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="mensajes.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="saludo.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="mensajes">
+        <MSBuild Projects="mensajes.cbproj"/>
+    </Target>
+    <Target Name="mensajes:Clean">
+        <MSBuild Projects="mensajes.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="mensajes:Make">
+        <MSBuild Projects="mensajes.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="saludo">
+        <MSBuild Projects="saludo.cbproj"/>
+    </Target>
+    <Target Name="saludo:Clean">
+        <MSBuild Projects="saludo.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="saludo:Make">
+        <MSBuild Projects="saludo.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="mensajes;saludo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="mensajes:Clean;saludo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="mensajes:Make;saludo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

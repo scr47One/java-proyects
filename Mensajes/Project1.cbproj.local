@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021/04/19 20:12:59.525,=D:\Documentos\Rad Studio Projects\Project1PCH1.h</Transaction>
+    <Transaction>2021/04/19 20:13:00.164,=D:\Documentos\Rad Studio Projects\Unit1.cpp</Transaction>
+    <Transaction>2021/04/19 21:05:07.519,D:\Documentos\Rad Studio Projects\mensaje1.dfm=D:\Documentos\Rad Studio Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/04/19 21:05:07.519,D:\Documentos\Rad Studio Projects\mensaje1.cpp=D:\Documentos\Rad Studio Projects\Unit1.cpp</Transaction>
+    <Transaction>2021/04/19 21:05:07.519,D:\Documentos\Rad Studio Projects\mensaje1.h=D:\Documentos\Rad Studio Projects\Unit1.h</Transaction>
+    <Transaction>2021/04/19 21:08:29.545,D:\Documentos\Rad Studio Projects\Mensajes\mensajes.h=D:\Documentos\Rad Studio Projects\Project1PCH1.h</Transaction>
+    <Transaction>2021/04/19 21:08:41.657,D:\Documentos\Rad Studio Projects\Mensajes\Project1.cbproj=D:\Documentos\Rad Studio Projects\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
