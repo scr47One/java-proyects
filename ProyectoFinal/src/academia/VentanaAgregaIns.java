@@ -285,7 +285,6 @@ public class VentanaAgregaIns extends javax.swing.JFrame
     {//GEN-HEADEREND:event_agregarButtonActionPerformed
         try
         {
-
             Object objInst = new Institucion(dirTextField.getText(), Integer.parseInt(cveTextField.getText()), nomTextField.getText(), Long.parseLong(telTextField.getText()));
             Nodo p = new Nodo(objInst, nomTextField.getText());
             String etiqueta[] = new String[1];

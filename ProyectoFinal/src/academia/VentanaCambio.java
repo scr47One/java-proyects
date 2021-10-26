@@ -298,7 +298,7 @@ public class VentanaCambio extends javax.swing.JFrame
                 etiqueta[0] = tecDes;
                 etiqueta[1] = carreraComboBox.getSelectedItem().toString();
                 Nodo n1 = buscar(VentanaP.raiz, 0, etiqueta);
-                //Nodo ex = buscar(VentanaP.raiz, 0, etiqueta);
+                //Nodo ex = buscarRepetidos(VentanaP.raiz, 0, etiqueta);
                 Nodo aux = Multilistas.busca(VentanaP.raiz, etiqueta1[0]);
                 Nodo aux1 = Multilistas.busca(VentanaP.raiz, etiqueta[0]);
                 if (n1 != null)

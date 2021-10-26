@@ -258,9 +258,7 @@ public class VentanaP extends javax.swing.JFrame
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelg, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelg, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
         );
 
         pack();
@@ -365,24 +363,6 @@ public class VentanaP extends javax.swing.JFrame
         this.dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-//    public String desp0(Nodo raiz, int nivel)
-//    {
-//        String s = "";
-//        if (raiz != null)
-//        {
-//            s = raiz.getEtiqueta();
-//            tecComboBox.addItem(s);
-//            desp0(raiz.getSig(), 0);
-//        }
-//        return s;
-//    }
-//
-//    public void actualizarUI()
-//    {
-//        GuardaArchivos.guardar(raiz, "Multilista.dat");
-//        desp0(raiz, 0);
-//
-//    }
     public void validarTabla()
     {
         int index = 0;

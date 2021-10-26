@@ -84,30 +84,6 @@ public class ArbolBinario implements Serializable
         return s;
     }
 
-//    public ListaSL insertar(NodoArbol raiz, ListaSL ls, String etq)
-//    {
-//        if (raiz == null)
-//        {
-//            return ls;
-//        } else
-//        {
-//            if (raiz.getHilo().getEtiqueta().equals(etq))
-//            {
-//                Nodo aux = raiz.getHilo();
-//                if (aux.getSig() != null && !aux.getSig().getEtiqueta().equals(etq))
-//                {
-//                    aux.setSig(null);
-//                    ls.inserta(aux);
-//                } else
-//                {
-//                    ls.inserta(aux);
-//                }
-//                ls = insertar(raiz.getIzq(), ls, etq);
-//                ls = insertar(raiz.getDer(), ls, etq);
-//            }
-//            return ls;
-//        }
-//    }
 
     /**
      * METODO DE BUSQUEDA DE NODO REPETIDOS EN UN ARBOL BINARIO
@@ -117,7 +93,7 @@ public class ArbolBinario implements Serializable
      * @param a ALMACENA LOS NODOS REPETIDOS EN UN ARBOL BINARIO
      * @return
      */
-    public ArbolBinario buscar(NodoArbol raiz, String n, ArbolBinario a)
+    public ArbolBinario buscarRepetidos(NodoArbol raiz, String n, ArbolBinario a)
     {
 
         if (raiz == null)
@@ -142,16 +118,16 @@ public class ArbolBinario implements Serializable
                     a.setRaiz(a.inserta(a.getRaiz(), aux));
                     a.setRaiz(a.balancear(a.getRaiz()));
                 }
-                a = buscar(raiz.getIzq(), n, a);
-                a = buscar(raiz.getDer(), n, a);
+                a = buscarRepetidos(raiz.getIzq(), n, a);
+                a = buscarRepetidos(raiz.getDer(), n, a);
             } else
             {
                 if (raiz.getEtiqueta().compareTo(n) > 0)
                 {
-                    return buscar(raiz.getIzq(), n, a);
+                    return buscarRepetidos(raiz.getIzq(), n, a);
                 } else
                 {
-                    return buscar(raiz.getDer(), n, a);
+                    return buscarRepetidos(raiz.getDer(), n, a);
                 }
             }
         }
@@ -354,7 +330,8 @@ public class ArbolBinario implements Serializable
 
     /**
      * Metodo elimina en arbol binario CASOS Y CONSIDERACIONES DE LA ELIMINACION
-     * 1. CUANDO EL NODO A ELIMINAR NO TIENE NODOS ABAJOS 2.CUANDO EL NODO A
+     * 1. CUANDO EL NODO A ELIMINAR NO TIENE NODOS ABAJOS 2.
+     * CUANDO EL NODO A
      * ELIMINAR TIENE UN NODO HACIA ABAJO YA SEA, IZQ O DER,ESTE NODO ABAJO
      * SUSTITUYE AL NODO ELIMINADO 3. CUANDO EL NODO A ELIMINAR TIENE 2 NODOS
      * HACIA ABJO Y ESTOS PUEDEN TENER O NO NODOS SUCESORES
@@ -587,6 +564,30 @@ public class ArbolBinario implements Serializable
             return arr[0];
         }
     }
+    //    public ListaSL insertar(NodoArbol raiz, ListaSL ls, String etq)
+//    {
+//        if (raiz == null)
+//        {
+//            return ls;
+//        } else
+//        {
+//            if (raiz.getHilo().getEtiqueta().equals(etq))
+//            {
+//                Nodo aux = raiz.getHilo();
+//                if (aux.getSig() != null && !aux.getSig().getEtiqueta().equals(etq))
+//                {
+//                    aux.setSig(null);
+//                    ls.inserta(aux);
+//                } else
+//                {
+//                    ls.inserta(aux);
+//                }
+//                ls = insertar(raiz.getIzq(), ls, etq);
+//                ls = insertar(raiz.getDer(), ls, etq);
+//            }
+//            return ls;
+//        }
+//    }
 //    public NodoArbol insertaHilo(NodoArbol raiz, String etq, Nodo n)
 //    {
 //        if (raiz == null)

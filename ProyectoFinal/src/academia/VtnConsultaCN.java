@@ -205,10 +205,10 @@ public class VtnConsultaCN extends javax.swing.JFrame
     }//GEN-LAST:event_jButton1ActionPerformed
 //    public ArbolBinario cargaArbol(ArbolBinario ab, String s, ArbolBinario ab1)
 //    {
-//        ab = TablasHash.buscar(VentanaP.rHash, s, null);
+//        ab = TablasHash.buscarRepetidos(VentanaP.rHash, s, null);
 //        if (ab != null)
 //        {
-//            ab1 = ab.buscar(ab.getRaiz(), s, ab1);
+//            ab1 = ab.buscarRepetidos(ab.getRaiz(), s, ab1);
 //            return ab1;
 //        } else
 //        {
@@ -234,7 +234,7 @@ public class VtnConsultaCN extends javax.swing.JFrame
                 ArbolBinario ab1 = new ArbolBinario();
                 NodoArbol arr[] = new NodoArbol[2];
                 //ab1 = ab.eliminaNodoR(ab, carTextField.getText().toLowerCase(), arr, ab1
-                ab1 = ab.buscar(ab.getRaiz(), carTextField.getText().toLowerCase(), ab1);
+                ab1 = ab.buscarRepetidos(ab.getRaiz(), carTextField.getText().toLowerCase(), ab1);
                 if (ab1 != null && ab1.getRaiz() != null)
                 {
                     while (ab1.getRaiz() != null)

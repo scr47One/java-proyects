@@ -112,7 +112,7 @@ public class PrbArbolBinario
 
         //PRUEBA DEL METODO DE BUSQUEDA DE NODOSARBOLES REPETIDOS
         ArbolBinario ab1 = new ArbolBinario();
-        ab1 = ab.buscar(ab.getRaiz(), "A", ab1);
+        ab1 = ab.buscarRepetidos(ab.getRaiz(), "A", ab1);
         System.out.println(ab1.enOrden(ab1.getRaiz()));
         System.out.println("-------------------------------------");
 
@@ -176,7 +176,7 @@ public class PrbArbolBinario
         }
         System.out.println("ARBOL GENERAL CON TODOS LOS NODOS INCLUYENDO LOS REPETIDOS");
         System.out.println(ab.enOrden(ab.getRaiz()));
-        ab2 = ab.buscar(ab.getRaiz(), "A", ab2);
+        ab2 = ab.buscarRepetidos(ab.getRaiz(), "A", ab2);
         System.out.println("NODOS REPETIDOS DENTRO DEL ARBOLBINARIO GENERAL");
         System.out.println(ab2.enOrden(ab2.getRaiz()));
         System.out.println(ab.enOrden(ab.getRaiz()));
